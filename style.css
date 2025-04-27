@@ -1,0 +1,477 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+/*css reset section */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Reset Section */
+
+/* Beginning of the styling section */
+
+/* Font & Icons styling */
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  h1{
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+  }
+
+/*Body Design */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:300px 1fr;
+    grid-template-rows: 150px 1fr; 
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar body"
+    ;
+}
+
+/* Sidebar Desing and styling */
+
+.sidebar{
+    display: grid;
+    grid-area: sidebar;
+    background-color: #1992d4;
+    grid-template-rows: 0.1fr 0.4fr 0.3fr;    
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    padding-bottom: 3px;  
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+.main-icon{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+}
+
+.dashboard-text{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.items1{
+    display: grid;
+    grid-template-rows: repeat(6, 0.2fr);
+    grid-template-columns: 70px 1fr;
+    padding-top: 15px;
+    padding-left: 5px;
+    align-items: center;
+}
+
+.items2{
+    display: grid;
+    grid-template-rows: repeat(3, 0.25fr);
+    grid-template-columns: 70px 1fr;
+    padding-left: 5px;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* Header Design section 1*/
+
+.header{
+    display: grid;
+    grid-area: header;
+    grid-template-rows: 0.4fr 0.6fr;
+    background-color: white;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.search-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+
+}
+
+.notification-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Hudson-text{
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.img{
+    padding-right: 20px;
+    width: 50px;
+}
+
+.profile1-pic{
+    width: 100%;
+}
+
+.search-bar-container{
+    display: grid;
+    align-items: center;
+    padding-left: 0px;
+}
+
+.search-bar{
+    width: 600px;
+    height: 25px;
+    gap: 10px;
+    margin-left: 5px;
+    background-color: rgba(226,232,240,255);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.search-icon{
+    display: grid;
+    align-items: center;
+}
+
+.search-bar:hover {
+    background-color: #e0e0e0;
+  }
+  
+.search-bar:focus {
+    outline: 1px solid #2196f3;
+  }
+
+.notification{
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+
+}
+
+/* Header Design End */
+
+/* Header design part 2*/
+
+.profile-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-profile{
+    padding: 0px 20px 0px 20px;
+    font-family:"Josefin Sans", sans-serif; 
+    font-weight: bold;
+}
+
+.text-para{
+    font-size: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button2, .button3{
+    padding-left: 60px;
+}
+
+button{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #1992d4;
+    border-radius: 30px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+button:hover {
+    background-color: #1775e1; 
+    transition: background-color 0.3s ease;
+  }
+
+.img1{
+    width: 60px;
+    
+}
+
+.profile2-pic{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.text1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+}
+
+/*Header design part 2 end*/
+
+/* Project Cards */
+
+.Projects{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    background-color: rgba(226,232,240,255);
+}
+
+.Your-Projects{
+    display: grid;
+    gap: 25px 20px;
+    padding: 25px;
+    grid-template: 0.4fr 0.4fr 0.4fr/0.5fr 0.5fr;      
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    background-color: #f0b429;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content{
+    display: grid;
+    background-color: white;
+    grid-template-rows: 0.2fr 1fr 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 30px 20px 30px 20px;
+}
+
+.content-text{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+}
+
+.content-text-para{
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 10px;
+}
+
+.content-icons{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.icon3{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.icon2{
+    margin-left: 40px;
+}
+/*Project section end*/
+
+/* Right section */
+
+.right-section{
+    display: grid;
+    gap: 25px 20px;
+    padding: 20px 20px 20px 0px;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+/* Announcements section */
+
+.announcements{
+    display: grid;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+    gap: 15px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+.right-sec-text-header{
+    display: grid;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: small;
+    padding-bottom: 5px;
+}
+
+.right-sec-text-para{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px rgb(199, 198, 198) solid;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: smaller;
+}
+
+.right-sec-text-para-last{
+    display: flex;
+    align-items: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: smaller;
+}
+
+/* Trending section */
+
+.trending{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.trend-container1, .trend-container2, .trend-container3, .trend-container4{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+
+}
+
+.trend-container1, .trend-container2, .trend-container3{
+    border-bottom: 1px rgb(199, 198, 198) solid;
+}
+
+.pic-trend1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.text-trend{
+    font-family: "Josefin Sans", sans-serif;
+    margin-left: 20px;
+    font-size: small;
+}
+
+.text1-trend{
+    font-weight: bold;
+}
+
+.text2-trend{
+    margin-top: 5px;
+}
+
+/* End of right section */
+
